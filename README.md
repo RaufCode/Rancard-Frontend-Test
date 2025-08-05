@@ -1,6 +1,12 @@
 # Task Management Dashboard
 
 A clean and modern Task Management Dashboard built with React + TypeScript.
+To sign in, use one of the following credentials:
+[
+(username: emilys, password: emilyspass),
+(username: michaelw, password: michaelwpass),
+(username: sophiab, password: sophiabpass)
+]
 
 ## Features
 
