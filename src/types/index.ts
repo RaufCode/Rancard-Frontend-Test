@@ -1,4 +1,3 @@
-// API Response types
 export interface ApiResponse<T> {
   data: T;
   message?: string;
@@ -11,7 +10,6 @@ export interface PaginatedResponse<T> extends ApiResponse<T> {
   limit: number;
 }
 
-// Task related types
 export interface Task {
   id: string;
   title: string;
@@ -26,7 +24,6 @@ export type TaskStatus = "To Do" | "In Progress" | "Done";
 
 export type FilterStatus = "All" | TaskStatus;
 
-// User related types
 export interface User {
   id: number;
   username: string;
@@ -37,7 +34,6 @@ export interface User {
   image: string;
 }
 
-// Auth types
 export interface LoginCredentials {
   username: string;
   password: string;
@@ -48,7 +44,6 @@ export interface AuthResponse extends User {
   refreshToken: string;
 }
 
-// Form types
 export interface TaskFormData {
   title: string;
   description?: string;
@@ -61,7 +56,6 @@ export interface LoginFormData {
   password: string;
 }
 
-// Component props
 export interface LoadingSpinnerProps {
   size?: "sm" | "md" | "lg";
   className?: string;
@@ -72,7 +66,6 @@ export interface ErrorMessageProps {
   className?: string;
 }
 
-// Utility types
 export type Optional<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>;
 
 export type RequireField<T, K extends keyof T> = T & Required<Pick<T, K>>;
