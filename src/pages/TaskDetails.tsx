@@ -28,20 +28,22 @@ export default function TaskDetails() {
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       <DashboardHeader />
       <div className="max-w-4xl mx-auto py-6 px-4">
-        <h1 className="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-4">{task.title}</h1>
+        <h1 className="text-3xl text-center font-bold text-gray-800 dark:text-gray-100 mb-4">{task.title}</h1>
 
-        <div className="space-y-3 text-gray-700 dark:text-gray-300 text-lg">
+        <div className="space-y-3 text-center text-gray-700 dark:text-gray-300 text-lg">
           <p>
             <strong>Status:</strong> {task.status}
           </p>
         </div>
 
-        <Button
+        <div className="flex justify-center">
+          <Button
           className="mt-6 bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-800 dark:text-gray-200"
           onClick={() => navigate("/")}
-        >
-          Back to Tasks
-        </Button>
+          >
+            Back to Tasks
+          </Button>
+        </div>
       </div>
     </div>
   );

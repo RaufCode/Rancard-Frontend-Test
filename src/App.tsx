@@ -4,6 +4,8 @@ import ProtectedRoute from "./components/ProtectedRoute";
 
 const Dashboard = lazy(() => import("./pages/DashBoard"));
 const SignIn = lazy(() => import("./pages/auth/SignIn"));
+const TaskDetails = lazy(() => import("./pages/TaskDetails"));
+
 const ErrorPage = lazy(() => import("./pages/ErrorPage"));
 
 function App() {
@@ -14,6 +16,7 @@ function App() {
 
         <Route element={<ProtectedRoute />}>
           <Route path="/" element={<Dashboard />} />
+          <Route path="tasks/:id" element={<TaskDetails/>} />
           <Route path="*" element={<ErrorPage />} />
         </Route>
       </Routes>
